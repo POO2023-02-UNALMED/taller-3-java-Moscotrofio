@@ -1,49 +1,68 @@
 public class Control {
     TV tv;
 
-    public void turnOff() {
-        tv.estado = false;
-    }
-
-    public boolean getEstado() {
-        return this.tv.estado;
-    }
-
-    public void canalUp() {
-        this.tv.canalUp();
-    }
-
-    public void canalDown() {
-        this.tv.canalDown();
-    }
-
-    public void volumenUp() {
-        this.tv.volumenUp();
-    }
-
-    public void volumenDown() {
-        this.tv.volumenDown();
-    }
-    
-
-    public void setCanal(int canal) {
-        this.tv.canal = canal;
-    }
-
-    public void setVolumen(int volumen) {
-        this.tv.volumen = volumen;
-    }
-
     public void enlazar(TV tv) {
-        this.tv = tv;
-        this.tv.control = this;
-    }
-
-    public void setTv(TV tv) {
-        this.tv = tv;
+        tv.setControl(this);
+        this.setTv(tv);
     }
 
     public TV getTv() {
         return this.tv;
     }
+    public void setTv(TV tv) {
+        this.tv = tv;
+    }
+
+    public void turnOn(){
+        if (this != null) {
+            this.tv.estado = true;
+        }
+    }
+    public void turnOff() {
+        if (this.tv != null) {
+            this.tv.estado = false;
+        }
+    }
+
+    public void canalUp() {
+        if (this != null) {
+            this.tv.canalUp();
+        }
+    }
+
+    public void canalDown() {
+        if (this != null) {
+            this.tv.canalDown();
+        }
+    }
+
+    public void volumenUp() {
+        if (this != null) {
+            this.tv.volumenUp();
+        }
+    }
+
+    public void volumenDown() {
+        if (this != null) {
+            this.tv.volumenDown();
+        }
+    }
+    
+
+    public void setCanal(int canal) {
+        if (this != null) {
+            this.tv.setCanal(canal);
+        }
+    }
+
+    public void setVolumen(int volumen) {
+        if (this != null) {
+            this.tv.setVolumen(volumen);
+        }
+    }
+    
+    public boolean getEstado() {
+        return this.tv.estado;
+    }
+
 }
