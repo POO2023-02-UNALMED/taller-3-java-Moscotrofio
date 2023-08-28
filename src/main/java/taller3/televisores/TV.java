@@ -107,9 +107,9 @@ public class TV {
     }
 
     public void volumenDown() {
-        if (this.estado) {
-            if (this.volumen > 0) {
-                this.volumen--;
+        if (estado) {
+            if (volumen > 0) {
+                volumen--;
             }
         }
     }
