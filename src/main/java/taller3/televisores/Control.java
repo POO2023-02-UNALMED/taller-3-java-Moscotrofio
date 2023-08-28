@@ -8,10 +8,10 @@ public class Control {
         this.setTv(tv);
     }
 
-    public static TV getTv() {
+    public TV getTv() {
         return tv;
     }
-    public static void setTv(TV tv) {
+    public void setTv(TV tv) {
         this.tv = tv;
     }
 
